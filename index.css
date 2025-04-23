@@ -1,0 +1,22 @@
+header{
+    text-align: center;
+}
+
+.navegacao a{
+    text-decoration: none;
+}
+
+.navegacao li{
+    display: inline;
+    font-size: 25px;
+    text-decoration: none; 
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+#culinaria{
+    background-color: rgb(53, 160, 53);
+
+}
