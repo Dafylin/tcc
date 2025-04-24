@@ -1,22 +1,53 @@
-header{
+header {
+
     text-align: center;
+    
 }
 
-.navegacao a{
+.navegacao a {
+
     text-decoration: none;
+    color: #ffffff;
+
 }
 
-.navegacao li{
+.navegacao li {
+
     display: inline;
     font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-decoration: none; 
     margin-left: 20px;
     padding: 10px;
     border-radius: 10px;
+    opacity: 0.7;
+    
 
 }
 
-#culinaria{
+#culinaria {
+
     background-color: rgb(53, 160, 53);
 
+}
+
+#PontosTurísticos {
+
+    background-color: #ff3131
+
+}
+
+#HistóriaeCuriosidades {
+
+    background-color: #38b6ff;
+}
+
+#Hotelaria {
+
+    background-color: #ffde59;
+}
+
+#CulturaeFestas {
+
+    background-color: #ff914d;
 }
