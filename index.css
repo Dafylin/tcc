@@ -55,3 +55,16 @@ header {
 #SaibaMais {
     background-color: aquamarine;
 }
+
+input{
+    margin-left: 80%;
+    width: 250px;
+}
+
+input[type=text]::placeholder {
+    text-align: right; /*    Alinha o texto do placeholder para a direita */
+    padding-right: 60px; /* Adiciona um espaço à direita para o texto */
+    
+    
+    
+  }
