@@ -52,10 +52,6 @@ header {
     background-color: #ff914d;
 }
 
-#SaibaMais {
-    background-color: aquamarine;
-}
-
 input{
     margin-left: 80%;
     width: 250px;
@@ -65,6 +61,31 @@ input[type=text]::placeholder {
     text-align: right; /*    Alinha o texto do placeholder para a direita */
     padding-right: 60px; /* Adiciona um espaço à direita para o texto */
     
-    
-    
   }
+
+ .HistoriadeParanagua {
+
+    width: 200%;
+
+ }
+
+.imagem {
+
+    float: left;
+    font-size: 100%;
+    margin-right: 0.5%; /* Espaço entre a imagem e o texto */
+
+} 
+
+h2    {
+
+    overflow: hidden; /* Para corrigir o fluxo do layout */
+
+}
+
+h3 {
+    clear: both; /* Garante que o texto não se sobreponha a outros elementos abaixo */
+  }
+
+ 
+ 
