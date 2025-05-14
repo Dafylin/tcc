@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+ 
+body {
+    font-family: Lexend Deca, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    margin: 0;
+    padding: 30px;
+    background-color: #EDFFF2;
+}
+
+
+.navegacao a {
+
+    text-decoration: none;
+    color: #ffffff;
+
+}
+
+.navegacao li {
+
+    display: inline;
+    font-size: 30px;
+    font-family: Lexend Deca, Geneva, Tahoma, sans-serif;
+    text-decoration: none; 
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0.7;
+    
+
+}
+
+
+#culinaria {
+
+    background-color: rgb(53, 160, 53);
+
+}
+
+#PontosTurísticos {
+
+    background-color: #ff3131
+
+}
+
+#HistóriaeCuriosidades {
+
+    background-color: #38b6ff;
+}
+
+#Hotelaria {
+
+    background-color: #ffde59;
+}
+
+#CulturaeFestas {
+
+    background-color: #ff914d;
+}
+
+
+section {
+    display: flex;
+    align-items: flex-start; /* Alinha o texto e a imagem no topo */
+    margin-bottom: 0px; /* Espaço entre as seções */
+    background-color: #fff; /* Fundo branco para as seções */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+
+img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 34px;
+}
+
+
+
+
+.text {
+    flex: 1; /* Faz o texto ocupar o espaço restante */
+    margin-right: 50px; /* Espaço entre o texto e a imagem */
+}
+
+.bottom-right {
+    flex-direction: row-reverse; /* Texto à esquerda e imagem à direita */
+
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size:20px;
+    margin: 5px 0; /* Margem para espaçamento entre os parágrafos */
+}
