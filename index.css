@@ -162,10 +162,12 @@ header {
     display: inline;
     font-size: 40px;
     font-family: Lexend Deca, Geneva, Tahoma, sans-serif;
+    width: 100px; /* Define a largura do quadrado como 200 pixels */
+    height: 100px; /* Define a altura do quadrado como 200 pixels, para que seja um quadrado perfeito */
     text-decoration: none; 
-    margin-left: 40px;
-    margin: 20px;
-    padding: 20px;
+    margin-left: 10px;
+    margin-right: 5px;
+    padding: 5px;
     border-radius: 10px;
     opacity: 0.7;
     
