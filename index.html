@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,26 +7,198 @@
     <title>Paranaguá Turismo</title>
     <link rel="stylesheet" href="index.css">
 </head>
-<body> 
+<body>
+    <style>
+        /* Estilos básicos para o corpo da página */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            background-color: #EDFFF2;
+        }
 
+        /* Estilos para o cabeçalho */
+        header {
+            width: 100%;
+            background-color: #00c025;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Estilos para o link da casinha */
+        .home-icon {
+            text-decoration: none;
+            color: #333;
+            display: flex; /* Para alinhar a imagem */
+            align-items: center;
+        }
+
+        /* Estilos para a imagem da casinha */
+        .home-image {
+            width: 30px; /* Ajuste o tamanho conforme necessário */
+           left: 30px;
+            height: auto; /* Mantém a proporção */
+            vertical-align: middle; /* Ajuda a alinhar */
+        }
+
+        /* Estilo para o contêiner da pesquisa (barra + lupa) */
+        .search-container {
+            position: relative; /* Essencial para posicionar o ícone absolutamente dentro dele */
+            flex-grow: 1;
+            margin: 0 20px;
+            display: flex; /* Para alinhar o input e o ícone */
+            align-items: center;
+        }
+
+        /* Estilo para a barra de pesquisa */
+        .search-bar {
+            flex-grow: 1;
+            padding: 8px 30px 8px 8px; /* Adiciona padding à direita para o ícone */
+            border: 1px solid #ccc;
+            border-radius: 15px; /* Bordas arredondadas */
+            width: 50%; /* Garante que o input preencha o contêiner */
+            box-sizing: border-box; /* Inclui padding e border no width */
+        }
+
+        /* Estilo para o ícone da lupa */
+        .search-icon {
+            position: absolute; /* Posiciona o ícone em relação ao .search-container */
+            right: 25px; /* Distância da borda direita */
+            top: 50%; /* Alinha verticalmente ao centro */
+            transform: translateY(-50%); /* Ajusta o alinhamento vertical */
+            width: 25px; /* Ajuste o tamanho conforme necessário */
+            height: auto; /* Mantém a proporção */
+            pointer-events: none; /* Permite clicar no input */
+        }
+
+         /* Ajuste o placeholder para não ficar por baixo do ícone */
+        input[type=text]::placeholder {
+            text-align: center; /* Volta o alinhamento para a esquerda */
+            padding-right: 30px; /* Garante que o texto não vá para baixo do ícone */
+        }
+
+
+        /* Estilos para os botões de autenticação */
+        .auth-buttons a {
+            margin-left: 10px;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block; /* Garante que o padding funcione corretamente */
+        }
+
+        .login-btn {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .signup-btn {
+            background-color: #2835a7;
+            color: white;
+        }
+
+        
+    </style>
+
+    <header>
+        <!-- Link da casinha - Troque o 'src' pela URL da sua imagem de casinha -->
+        <a href="/" class="home-icon">
+            <img src="icons8-casinha-de-cachorro-50.png" alt="Ícone de Início" class="home-image">
+        </a>
+
+        <!-- Contêiner para a barra de pesquisa e a lupa -->
+        <div class="search-container">
+            <!-- Barra de pesquisa -->
+            <input type="text" class="search-bar" placeholder="Pesquisar...">
+            <!-- Ícone de lupa - Troque o 'src' pela URL da sua imagem de lupa -->
+            <img src="icons8-pesquisar-50.png" alt="Ícone de Lupa" class="search-icon">
+        </div>
+
+        <!-- Botões de Login e Cadastro -->
+        <div class="auth-buttons">
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="cadastro.html" class="signup-btn">Cadastro</a>
+        </div>
+    </header>
+
+  
+
+
+    
     <div class="logo">
-        <img src = "logo.png" alt = "Descrição da imagem" width = "85" height = "90" >
+        <img src = "logo.png" alt = "Descrição da imagem" width = "95" height = "90" >
         <h1> Paranaguá Turismo</h1>
 
     </div>
-     
-
-    <header>
-        
-        <img src="images.png01.png" alt="Turismo" style="width: 100%; height: auto;"> 
-
-
-        <div class="image-container">
-            <div class="overlay-text">Paranaguá é uma cidade <br>
-                rica em cultura.Tem uma <br> história marcante e <br> importante no <br> desenvolvimento do <br>
-                estado do Paraná. <br><br><br><br><br><br><br><br><br> </div>
+    
+    <div class="carousel">
+        <div class="slides">
+            <div class="slide active">
+                <img src="images.png01.png" alt="Foto 1" />
+            </div>
+            <div class="slide">
+                <img src="paranaguá03.png" alt="Foto 2" />
+            </div>
+            <div class="slide">
+                <img src="paranguá.png"Foto 3" />
+            </div>
+            <div class="slide">
+                <img src="paranaguá01.png" alt="Foto 4" />
+            </div>
         </div>
-    </header>
+        <div class="navigation-dots">
+            <span class="dot active" data-index="0" aria-label="Foto 1"></span>
+            <span class="dot" data-index="1" aria-label="Foto 2"></span>
+            <span class="dot" data-index="2" aria-label="Foto 3"></span>
+            <span class="dot" data-index="3" aria-label="Foto 4"></span>
+        </div>
+    </div>
+
+    
+    <br>
+    <br>
+    
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+        const intervalTime = 3000; // milliseconds
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+                dots[i].classList.toggle('active', i === index);
+            });
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            let nextIndex = (currentIndex + 1) % totalSlides;
+            showSlide(nextIndex);
+        }
+
+        let slideInterval = setInterval(nextSlide, intervalTime);
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                showSlide(parseInt(dot.dataset.index));
+                slideInterval = setInterval(nextSlide, intervalTime);
+            });
+        });
+    </script>
 
     
   <nav class="navegacao">

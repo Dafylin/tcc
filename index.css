@@ -9,9 +9,136 @@ body{
     
 }
 
+.search-bar {
+    flex-grow: 1;
+    margin: 0 20px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.home-image {
+    width: 30px; /* Ajuste o tamanho conforme necessário */
+    height: auto; /* Mantém a proporção */
+    vertical-align: middle; /* Ajuda a alinhar com outros elementos se necessário */
+}
+
+/* Você pode remover ou ajustar o estilo .home-icon se ele não for mais necessário para o <a> */
+.home-icon {
+    /* font-size: 24px;  Remova ou ajuste */
+    text-decoration: none;
+    color: #333;
+    display: flex; /* Pode ser útil para alinhar a imagem */
+    align-items: center;
+}
+
+
+/* Estilo para o contêiner da pesquisa */
+.search-container {
+    position: relative; /* Essencial para posicionar o ícone absolutamente dentro dele */
+    flex-grow: 1;
+    margin: 0 20px;
+    display: flex; /* Para alinhar o input e o ícone se necessário */
+    align-items: center;
+}
+
+/* Estilo para a barra de pesquisa (ajustado para dar espaço ao ícone) */
+.search-bar {
+    flex-grow: 1;
+    padding: 8px 30px 8px 8px; /* Adiciona padding à direita para o ícone */
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    width: 100%; /* Garante que o input preencha o contêiner */
+    box-sizing: border-box; /* Inclui padding e border no width */
+}
+
+/* Estilo para o ícone da lupa */
+.search-icon {
+    position: absolute; /* Posiciona o ícone em relação ao .search-container */
+    right: 10px; /* Distância da borda direita do contêiner */
+    top: 50%; /* Alinha verticalmente ao centro */
+    transform: translateY(-50%); /* Ajusta o alinhamento vertical */
+    width: 20px; /* Ajuste o tamanho conforme necessário */
+    height: auto; /* Mantém a proporção */
+    pointer-events: none; /* Permite clicar no input mesmo que o mouse esteja sobre o ícone */
+}
+
+/* Ajuste o placeholder para não ficar por baixo do ícone */
+input[type=text]::placeholder {
+    text-align: left; /* Volta o alinhamento para a esquerda */
+    padding-right: 30px; /* Garante que o texto não vá para baixo do ícone */
+}
+
+
+
 .logo{
     display: flex;
     align-items: center;
+}
+
+
+.carousel {
+    width: 2000px;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    background-color: #EDFFF2;
+}
+
+.slides {
+    position: relative;
+    height: 700px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+    pointer-events: none;
+}
+
+.slide.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.navigation-dots {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dot {
+    height: 14px;
+    width: 14px;
+    margin: 0 8px;
+    background: #888;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dot.active,
+.dot:hover {
+    background: #fff;
 }
 
 
@@ -20,22 +147,6 @@ header {
     text-align: center;
     background-image: url();
     
-}
-
-
-.image-container {
-    position: relative;
-    right: 500px;
-}
-.overlay-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 35px;
-    font-family: Lexend Deca, Geneva, Tahoma, sans-serif;
-    z-index: 1;
 }
 
 
@@ -49,11 +160,12 @@ header {
 .navegacao li {
 
     display: inline;
-    font-size: 30px;
+    font-size: 40px;
     font-family: Lexend Deca, Geneva, Tahoma, sans-serif;
     text-decoration: none; 
-    margin-left: 20px;
-    padding: 10px;
+    margin-left: 40px;
+    margin: 20px;
+    padding: 20px;
     border-radius: 10px;
     opacity: 0.7;
     
@@ -68,7 +180,7 @@ header {
 
 #PontosTurísticos {
 
-    background-color: #ff3131
+    background-color: #ff3131;
 
 }
 

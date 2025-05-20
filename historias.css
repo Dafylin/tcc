@@ -1,16 +1,75 @@
-.btn-his{
-    width: 18%;
-    height: 70px;
-    padding: 16px 0px;
-    margin: 25px;
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 3px;
-    color: #ffffff;
-    background: #38b6ff;
-    cursor: pointer;
-    box-shadow: 0px 10px 40px -12px #00ff8052;
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+body {
+    font-family: Lexend Deca, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    margin: 0;
+    padding: 30px;
+    background-color: #EDFFF2;
 }
+
+
+.navegacao a {
+
+    text-decoration: none;
+    color: #ffffff;
+
+}
+
+.navegacao li {
+
+    display: inline;
+    font-size: 40px;
+    font-family: Lexend Deca, Geneva, Tahoma, sans-serif;
+    text-decoration: none; 
+    margin-left: 25px;
+    padding: 15px;
+    border-radius: 10px;
+    opacity: 0.7;
+    
+
+}
+
+#culinaria {
+
+    background-color: rgb(53, 160, 53);
+
+}
+
+#PontosTurísticos {
+
+    background-color: #ff3131;
+
+}
+
+#HistóriaeCuriosidades {
+
+    background-color: #38b6ff;
+}
+
+#Hotelaria {
+
+    background-color: #ffde59;
+}
+
+#CulturaeFestas {
+
+    background-color: #ff914d;
+}
+
+input{
+    margin-left: 80%;
+    width: 250px;
+}
+
+input[type=text]::placeholder {
+    text-align: right; /*    Alinha o texto do placeholder para a direita */
+    padding-right: 60px; /* Adiciona um espaço à direita para o texto */
+    
+  }
+
+ .HistoriadeParanagua {
+
+    width: 200%;
+
+ }

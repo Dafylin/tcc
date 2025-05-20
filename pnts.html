@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Duas fotos com texto ao lado</title>
+<title>Pontos Turísticos</title>
 <link rel="stylesheet" href="pnts.css" />
 </head>
 <body>
@@ -165,14 +165,59 @@
  <br>
 
  <section >
-  <div class="photo-gallery">
-    <img src="igreja-só.png"  alt="Descrição da imagem" width="300" height="200" style="float: left; margin-right: 20px;">
-    <img src="ft.png-igreja.jpg" alt="Descrição da imagem" width="300" height="500" style="float: left; margin-right: 20px;">
-    <img src="casa-igreja.png" alt="Descrição da imagem" width="350" height="500" style="float: left; margin-right: 20px;">
-    <img src="cima-igeja.png" alt="Descrição da imagem" width="350" height="500" style="float: left; margin-right: 20px;">
-    <img src="cima-igeja.png" alt="Descrição da imagem" width="350" height="500" style="float: left; margin-right: 20px;">
-  
- </div>
+  <div class="carousel">
+    <div class="slides">
+        <div class="slide active">
+            <img src="igreja-só.png" alt="Foto 1" />
+        </div>
+        <div class="slide">
+            <img src="ft.png-igreja.jpg" alt="Foto 2" />
+        </div>
+        <div class="slide">
+            <img src="casa-igreja.png" alt="Foto 3" />
+        </div>
+        <div class="slide">
+            <img src="cima-igeja.png" alt="Foto 4" />
+        </div>
+    </div>
+    <div class="navigation-dots">
+        <span class="dot active" data-index="0" aria-label="Foto 1"></span>
+        <span class="dot" data-index="1" aria-label="Foto 2"></span>
+        <span class="dot" data-index="2" aria-label="Foto 3"></span>
+        <span class="dot" data-index="3" aria-label="Foto 4"></span>
+    </div>
+</div>
+
+<script>
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+    const intervalTime = 3000; // milliseconds
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+            dots[i].classList.toggle('active', i === index);
+        });
+        currentIndex = index;
+    }
+
+    function nextSlide() {
+        let nextIndex = (currentIndex + 1) % totalSlides;
+        showSlide(nextIndex);
+    }
+
+    let slideInterval = setInterval(nextSlide, intervalTime);
+
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            clearInterval(slideInterval);
+            showSlide(parseInt(dot.dataset.index));
+            slideInterval = setInterval(nextSlide, intervalTime);
+        });
+    });
+</script>
 </section>
 
 
@@ -281,22 +326,7 @@
       </div>
   </section>
 
-  <h1 style="font-size: 36px;">MORRO DA BALEIA<br>(Fortaleza de Nossa Senhora dos Prazeres de Paranaguá)</h1>
-  
-  
-  <section class="text">
-    <div class="text">
-      <h2>A Fortaleza de Nossa Senhora dos Prazeres de Paranaguá, também referida como Fortaleza da Barra ou Fortaleza de Paranaguá, localiza-se na praia da Fortaleza, no sopé do morro da Baleia (hoje da Fortaleza), na Ilha do Mel, litoral do estado do Paraná, no Brasil. Dominando a barra do canal grande de acesso à baía de Paranaguá, esta fortificação destinava-se à defesa estratégica da antiga vila de Paranaguá, garantindo a segurança do seu ancoradouro, quinze milhas adiante, onde era embarcado o ouro, a madeira e, mais tarde, a erva-mate extraídos da região, contra os corsários e espanhóis que frequentavam aquele trecho do litoral.</h2>
-      <img src="baleia-01.png" alt="Descrição da imagem" width="400" height="300" style="float: left; margin-right: 20px;">
-      
-      <img src="baleia-02.png" alt="Descrição da imagem" width="350" height="300" style="float: left; margin-right: 20px;">
-      
-      <img src="baleia-03.png" alt="Descrição da imagem" width="370" height="300" style="float: left; margin-right: 20px;">
-      
-      <img src="baleia-04.png" alt="Descrição da imagem" width="370" height="300" style="float: left; margin-right: 20px;">
-      
-      </div>
-  </section>
+  cc
 
   <h1 style="font-size: 36px;">MORRO DAS CONCHAS</h1>
   <H1 style="font-size: 30px;">(farol das conchas)</H1>
